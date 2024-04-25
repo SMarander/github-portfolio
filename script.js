@@ -2,6 +2,7 @@
 
 // Function to add or remove class based on scroll position
 // Function to add or remove class based on scroll position
+// Function to add or remove class based on scroll position
 function toggleNavbarClass() {
   const navbar = document.querySelector('.navbar');
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -13,6 +14,7 @@ function toggleNavbarClass() {
     navbar.style.height = 'auto'; // Reset the height to its original value
   }
 }
+
 
 // Function to toggle the navigation menu on mobile devices
 function toggleNav() {
