@@ -1,23 +1,3 @@
-// script.js
-
-// Function to add or remove class based on scroll position
-// Function to add or remove class based on scroll position
-// Function to add or remove class based on scroll position
-// Function to add or remove class based on scroll position
-function toggleNavbarClass() {
-  const navbar = document.querySelector('.navbar');
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  if (scrollTop >= 100) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-}
-
-// Add event listener for scroll
-window.addEventListener('scroll', toggleNavbarClass);
-
-
 // Function to toggle the navigation menu on mobile devices
 function toggleNav() {
   const nav = document.querySelector('nav ul');
@@ -27,17 +7,21 @@ function toggleNav() {
 // Function to control the display of the scroll-to-top button
 function toggleScrollButton() {
   const scrollButton = document.getElementById("myBtn");
-  if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 10) {
-      scrollButton.style.display = "block";
-  } else {
-      scrollButton.style.display = "none";
-  }
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  scrollButton.style.display = (scrollTop > 5) ? "block" : "none";
 }
 
 // Function to scroll to the top of the document
 function scrollToTop() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+// Function to add or remove class based on scroll position
+function toggleNavbarClass() {
+  const navbar = document.querySelector('.navbar');
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  navbar.classList.toggle('scrolled', scrollTop >= 100);
 }
 
 // Add event listeners for scroll, menu icon click, and scroll-to-top button click
@@ -55,4 +39,3 @@ const scrollButton = document.getElementById("myBtn");
 if (scrollButton) {
   scrollButton.addEventListener('click', scrollToTop);
 }
-
