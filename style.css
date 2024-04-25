@@ -179,12 +179,12 @@ p a {
 }
 
 .navbar {
-    background-color: black;
+    background-color: lightblue;
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
-    transition: box-shadow 0.3s; /* Add transition for smooth effect */
+    transition: box-shadow 0.5s; /* Add transition for smooth effect */
     z-index: 1000; /* Ensure the navbar stays on top */
 }
 
