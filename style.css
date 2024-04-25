@@ -197,8 +197,8 @@ p a {
 }
 
 .navbar a {
-    color: white;
     text-decoration: none;
+    color: white;
     padding: 14px 20px;
 }
 
