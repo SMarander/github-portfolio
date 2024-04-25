@@ -3,17 +3,19 @@
 // Function to add or remove class based on scroll position
 // Function to add or remove class based on scroll position
 // Function to add or remove class based on scroll position
+// Function to add or remove class based on scroll position
 function toggleNavbarClass() {
   const navbar = document.querySelector('.navbar');
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   if (scrollTop >= 100) {
-    navbar.classList.add('navbarDark');
-    navbar.style.height = '50px'; // Adjust the height as needed
+    navbar.classList.add('scrolled');
   } else {
-    navbar.classList.remove('navbarDark');
-    navbar.style.height = 'auto'; // Reset the height to its original value
+    navbar.classList.remove('scrolled');
   }
 }
+
+// Add event listener for scroll
+window.addEventListener('scroll', toggleNavbarClass);
 
 
 // Function to toggle the navigation menu on mobile devices
