@@ -11,6 +11,20 @@ function toggleScrollButton() {
   scrollButton.style.display = (scrollTop > 5) ? "block" : "none";
 }
 
+// function to control the scrivimi button
+const modal = document.getElementById('modal');
+const open = document.getElementById('open');
+
+open.addEventListener('click', e => {
+  e.preventDefault();
+  modal.style.display = 'flex';
+});
+
+modal.addEventListener('click', e => {
+  if (e.target === modal) modal.style.display = 'none';
+});
+
+
 // Function to scroll to the top of the document
 function scrollToTop() {
   document.body.scrollTop = 0; // For Safari
