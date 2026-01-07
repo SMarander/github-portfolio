@@ -24,7 +24,6 @@ modal.addEventListener('click', e => {
   if (e.target === modal) modal.style.display = 'none';
 });
 
-
 // Function to scroll to the top of the document
 function scrollToTop() {
   document.body.scrollTop = 0; // For Safari
