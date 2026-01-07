@@ -164,14 +164,24 @@
     <section id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <p>If you'd like to get in touch, feel free to reach out to me at <a href="mailto:andre.marangon95@gmail.com">andre.marangon95@gmail.com</a>.</p>
+            <a href="#" id="open">Scrivimi</a>
+
+<div id="modal">
+  <form method="POST" action="/send-message">
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Messaggio" required></textarea>
+    <button>Invia</button>
+  </form>
+</div>
+            
+            <p>If you'd like to get in touch, feel free to reach out at <a href="mailto:andre.marangon95@gmail.com">andre.marangon95@gmail.com</a>.</p>
         </div>
     </section>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 A.Marangh</p>
+            <p>&copy; 2024 A.Marangon</p>
         </div>
     </footer>
     
